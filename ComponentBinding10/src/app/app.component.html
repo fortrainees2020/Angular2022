@@ -1,0 +1,32 @@
+<html>
+  ​
+
+  <body>
+    ​ Hello Angular​ {{ title }}
+
+    <button type="button" class="btn btn-primary">Primary</button>​
+    <!-- use Property for interpolation-->
+    <h1>{{ pageHeader }}</h1>
+    <img src="{{ imagePath }}" witdh="75%" height="75%" />
+
+    <!-- Use method for interpolation-->
+    <h1>{{ "Full Name = " + getFullName() }}</h1>
+
+    <!--Property Binding-->
+    <input disabled="false" type="text" value="Cognizant" />​
+    <input [disabled]="isDisabled" type="text" value="CapGemini" />​
+    <button [disabled]="isDisabled">Click me</button>
+
+    <input id="inputId" type="text" value="Tom" />
+
+    <!-- Event Binding-->
+    <button (click)="displayAlert()" type="button" class="btn btn-primary">
+      Wish Me
+    </button>
+
+    <!-- Two way Data Binding-->
+    <input [(ngModel)]="name" />
+    <h4>{{ name }}</h4>
+  </body>
+</html>
+​
